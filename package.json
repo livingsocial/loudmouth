@@ -1,0 +1,10 @@
+{
+  "name"          : "loudmouth",
+  "description"   : "Shout about JavaScript errors & alerts",
+  "homepage"      : "",
+  "keywords"      : [""],
+  "author"        : "Pete Campbell <pete@sumirolabs.com>",
+  "repository"    : {"type": "git", "url": "git://github.com/livingsocial/loudmouth.git"},
+  "main"          : "loudmouth.js",
+  "version"       : "0.1.0"
+}

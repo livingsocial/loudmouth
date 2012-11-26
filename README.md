@@ -23,6 +23,12 @@ Errors are silently captured and then rethrown. Errors are only reported if you 
     Loudmouth.hollaback_url('<your URL goes here>');
     Loudmouth.lurk();
 
+Errors are sent by adding an image tag to the DOM. The error details are in the `error_info` parameter as JSON data. The `type` parameter indicates if the data is for an error or an alert.
+
+    GET "/loudmouth/shout?error_info={"errorMessage" : "Uncaught ReferenceError", "lineNumber" : "123", "type" : "error", "href" : "http://my.server.com/fake-error"
+
+The error information contains all of the details reported by JavaScript. The `window.location.href` value is also sent (as the `href` parameter).
+
 ## Turning Off Loudmouth
 
 You can turn off silent/loud mode by calling <code>goAway()</code>. This just unwraps the <code>onError</code> handler.

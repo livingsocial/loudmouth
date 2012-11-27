@@ -4,7 +4,7 @@ Loudmouth makes JavaScript errors and alerts more obvious in both development an
 
 ## How It Works
 
-Loudmouth wraps the <code>onError</code> handler. It reports the error information and then rethrows the error.
+Loudmouth wraps the <code>onError</code> handler. When an error occurs, it reports the error (see Loud and Silent mode). In Silent mode it also rethrows the error.
 
 # Using Loudmouth
 

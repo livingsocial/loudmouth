@@ -54,9 +54,10 @@ var Loudmouth = (function(my){
 		return config.hollaback_url;
 	};
 
-	my.addError = function(errorMessage, url, lineNumber){
-		addComplaint('error', {errorMessage: errorMessage, url: url, lineNumber: lineNumber});
-	};
+  my.addError = function(errorMessage, url, lineNumber){
+    errorMessage = errorMessage.replace(/"/g, "\\\"");
+    addComplaint('error', {errorMessage: errorMessage, url: url, lineNumber: lineNumber});
+  };
 
 	var addComplaint = function(type, error_info){
 		error_info.type = type;
